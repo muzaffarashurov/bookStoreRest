@@ -20,7 +20,7 @@ public class BookController {
     private final BookMapper bookMapper;
 
     @GetMapping("/all")
-    public List<BookResponse> getAllV2() {
+    public List<BookResponse> getAll() {
         return bookService.getAll().stream()
                 .map(bookMapper::mopFromModelToDto)
                 .toList();

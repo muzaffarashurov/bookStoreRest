@@ -2,7 +2,6 @@ package com.spaces.bookStoreRest.service;
 
 import com.spaces.bookStoreRest.mapper.BookMapper;
 import com.spaces.bookStoreRest.model.BookModel;
-import com.spaces.bookStoreRest.repository.AuthorRepository;
 import com.spaces.bookStoreRest.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +17,6 @@ public class BookService {
 
     private final BookRepository bookRepository;
     private final BookMapper bookMapper;
-    private final AuthorRepository authorRepository;
 
     public List<BookModel> getAll() {
         return bookRepository.findAll().stream()
